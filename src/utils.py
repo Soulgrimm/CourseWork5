@@ -111,7 +111,7 @@ def save_data_to_database(data: list[dict[str, Any]], database_name: str, params
                     INSERT INTO company_vacancies (company_id, name_vacansy, vacansy_url, salary, currency)
                     VALUES (%s, %s, %s, %s, %s)
                     """,
-                    (company_id, vacansy['name'], f"https://hh.ru/vacansy/{vacansy['id']}", avg_salary,
+                    (company_id, vacansy['name'], f"https://hh.ru/vacancy/{vacansy['id']}", avg_salary,
                      vacansy['salary']['currency']
                      ))
     conn.commit()
